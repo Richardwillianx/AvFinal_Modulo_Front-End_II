@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <title>Meus Recados</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="fw-semibold">Mural de Recados</h1>
+    </header>
+    <main>
+      <div class="header-bar">
+        <form id="form-message">
+          <input type="text" name="message" placeholder="Descrição" />
+          <input type="text" name="details" placeholder="Recado" />
+          <button type="button" onclick="saveMessage()">Salvar</button>
+        </form>
+      </div>
+
+      <table class="table table-dark table-striped-columns">
+        <thead class="table-head">
+          <th class="table-id">ID</th>
+          <th class="table-description">Descrição</th>
+          <th class="table-details">Recado</th>
+          <th class="table-buttons">Ação</th>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </main>
+    <button
+      type="button"
+      class="fw-bold btn btn-outline-dark position-absolute top-0 end-0"
+      onclick="sair()"
+    >
+      SAIR
+    </button>
+    <!--  <script src="./js/home.js"></script> -->
+  </body>
+</html>

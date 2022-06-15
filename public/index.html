@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Sistema de Recados</title>
+  </head>
+
+  <body>
+    <h1>Sistema de Recados</h1>
+    <div class="container" id="container">
+      <div id="wrapper" class="d-none">
+        <div id="local-alerta-bs" class="alert d-none" role="alert"></div>
+      </div>
+      <div class="form-container login-container">
+        <form
+          class="d-flex align-items-center justify-content-center flex-column text-align"
+          id="formulario-login"
+        >
+          <h2>Login</h2>
+
+          <div class="form-floating mb-2">
+            <input
+              type="email"
+              name="email"
+              id="input-login-email"
+              class="form-control mt-1"
+              placeholder="E-mail"
+              required
+            />
+
+            <label for="email">E-mail</label>
+          </div>
+
+          <div class="form-floating">
+            <input
+              type="password"
+              name="password"
+              id="input-login-senha"
+              class="form-control mt-2"
+              placeholder="password"
+              required
+            />
+            <label for="password">password</label>
+          </div>
+
+          <button
+            class="bg-secondary bg-gradient fw-bold text-light"
+            type="submit"
+          >
+            Entrar
+          </button>
+        </form>
+      </div>
+
+      <div class="form-container cadastro-container">
+        <form
+          class="d-flex align-items-center justify-content-center flex-column text-align"
+          id="formulario-cadastro"
+        >
+          <h2>Criar uma conta</h2>
+          <span>Use seu e-mail para realizar o cadastro</span>
+          <input type="text" placeholder="Nome" id="input-cadastro-nome" />
+          <input type="email" placeholder="E-mail" id="input-cadastro-email" />
+          <input
+            type="password"
+            placeholder="Senha"
+            id="input-cadastro-senha"
+          />
+          <button
+            class="bg-secondary bg-gradient fw-bold text-light"
+            type="submit"
+          >
+            Cadastrar
+          </button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h2>Agora é só aproveitar!</h2>
+            <!-- <h2>Bem vindo de volta!</h2> -->
+            <button class="btn-animacao fw-bolder text-dark" id="signIn">
+              Acessar minha conta
+            </button>
+          </div>
+
+          <div class="overlay-panel overlay-right">
+            <h2>Seja bem-vindo!</h2>
+            <p>Cadastre-se aqui.</p>
+            <button class="btn-animacao fw-bolder text-dark" id="signUp">
+              Criar uma conta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
