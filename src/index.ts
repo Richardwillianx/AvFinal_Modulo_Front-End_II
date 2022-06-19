@@ -15,12 +15,15 @@ let formularioCadastro = document.getElementById(
   "formulario-cadastro"
 ) as HTMLFormElement;
 
-interface iUsuario {
-  nome: string;
-  login: string;
-  senha: string;
-  recados: Array<any>;
-}
+let inputLoginEmail = document.getElementById(
+  "input-login-email"
+) as HTMLInputElement;
+let inputLoginSenha = document.getElementById(
+  "input-login-senha"
+) as HTMLInputElement;
+let formularioLogin = document.getElementById(
+  "formulario-login"
+) as HTMLFormElement;
 
 signUpButton.addEventListener("click", () => {
   container.classList.add("painel-direito-ativo");
@@ -28,6 +31,13 @@ signUpButton.addEventListener("click", () => {
 signInButton.addEventListener("click", () => {
   container.classList.remove("painel-direito-ativo");
 });
+
+interface iUsuario {
+  nome: string;
+  login: string;
+  senha: string;
+  recados: Array<any>;
+}
 
 formularioCadastro.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -65,7 +75,7 @@ function verificarCampos(): void {
   }
 }
 
-function cadastrarUsuario(novoUsuario: iUsuario): void {
+function cadastrarUsuario(novoUsuario: iUsuario) {
   let usuarios: Array<iUsuario> = buscarUsuariosStorage();
 
   let existe: boolean = usuarios.some((usuario) => {
@@ -120,16 +130,6 @@ function buscarUsuariosStorage(): Array<iUsuario> {
   return JSON.parse(localStorage.getItem("usuarios") || "[]");
 }
 
-let inputLoginEmail = document.getElementById(
-  "input-login-email"
-) as HTMLInputElement;
-let inputLoginSenha = document.getElementById(
-  "input-login-senha"
-) as HTMLInputElement;
-let formularioLogin = document.getElementById(
-  "formulario-login"
-) as HTMLFormElement;
-
 formularioLogin.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -152,5 +152,5 @@ function logarNoSistema(): void {
   }
 
   sessionStorage.setItem("usuarioLogado", inputLoginEmail.value);
-  window.location.href = "home.html";
+  window.location.href = "./home.html";
 }

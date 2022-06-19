@@ -6,6 +6,9 @@ let inputNome = document.getElementById("input-cadastro-nome");
 let inputEmail = document.getElementById("input-cadastro-email");
 let inputSenha = document.getElementById("input-cadastro-senha");
 let formularioCadastro = document.getElementById("formulario-cadastro");
+let inputLoginEmail = document.getElementById("input-login-email");
+let inputLoginSenha = document.getElementById("input-login-senha");
+let formularioLogin = document.getElementById("formulario-login");
 signUpButton.addEventListener("click", () => {
     container.classList.add("painel-direito-ativo");
 });
@@ -82,9 +85,6 @@ function mostrarAlertaBS(mensagem, tipo) {
 function buscarUsuariosStorage() {
     return JSON.parse(localStorage.getItem("usuarios") || "[]");
 }
-let inputLoginEmail = document.getElementById("input-login-email");
-let inputLoginSenha = document.getElementById("input-login-senha");
-let formularioLogin = document.getElementById("formulario-login");
 formularioLogin.addEventListener("submit", (e) => {
     e.preventDefault();
     logarNoSistema();
@@ -100,5 +100,5 @@ function logarNoSistema() {
         return;
     }
     sessionStorage.setItem("usuarioLogado", inputLoginEmail.value);
-    window.location.href = "home.html";
+    window.location.href = "./home.html";
 }
